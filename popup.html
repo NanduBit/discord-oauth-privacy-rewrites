@@ -16,16 +16,51 @@
       <section id="error-banner" class="error hidden"></section>
 
       <section>
-        <div id="scopes" class="scope-grid"></div>
+        <details class="scope-dropdown">
+          <summary>Default Scope Preference</summary>
 
-        <div class="legend">
-          <div class="legend-item">
-            <span class="icon ban" title="Disabling this may break apps">No</span>
-            <span>Might break commonly used apps</span>
+          <div id="scopes" class="scope-grid"></div>
+
+          <div class="legend">
+            <div class="legend-item">
+              <span class="icon ban" title="Disabling this may break apps">?</span>
+              <span>Might break commonly used apps</span>
+            </div>
+            <div class="legend-item">
+              <span class="icon warn" title="You should disable this for privacy">!</span>
+              <span>You should really disable this for the sake of your privacy</span>
+            </div>
           </div>
-          <div class="legend-item">
-            <span class="icon warn" title="You should disable this for privacy">!</span>
-            <span>You should really disable this for the sake of your privacy</span>
+        </details>
+
+        <div id="scope-summary" class="scope-summary">
+          <h2>Scope Request Summary</h2>
+          <div class="summary-block">
+            <div class="summary-title">Original Scopes From URL</div>
+            <div id="summary-original" class="summary-list"></div>
+          </div>
+          <div class="summary-block">
+            <div class="summary-title">Removed By Extension</div>
+            <div id="summary-removed" class="summary-list"></div>
+          </div>
+          <div class="summary-block">
+            <div class="summary-title">Scopes Currently Requested</div>
+            <div id="summary-current" class="summary-list"></div>
+            <div class="summary-add-row">
+              <div id="summary-scope-picker" class="scope-picker">
+                <button
+                  id="summary-scope-toggle"
+                  class="summary-select"
+                  type="button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  Select scope
+                </button>
+                <div id="summary-scope-menu" class="scope-picker-menu" role="listbox"></div>
+              </div>
+              <button id="summary-add-button" class="summary-add-button" type="button" title="Add selected scope">+</button>
+            </div>
           </div>
         </div>
       </section>
@@ -34,14 +69,6 @@
         <button id="pause-button" type="button"></button>
         <p id="pause-status" class="pause-status"></p>
       </section>
-
-      <footer class="footer">
-        <a class="chip" href="https://discord.gg/yYd6YKHQZH" target="_blank" rel="noreferrer">Support</a>
-        <a class="chip" href="https://wamellow.com?utm_source=chrome-extension" target="_blank" rel="noreferrer">Wamellow</a>
-        <a class="chip" href="https://lunish.nl" target="_blank" rel="noreferrer">Portfolio</a>
-        <a class="chip" href="https://ko-fi.com/mwlica" target="_blank" rel="noreferrer">Ko-fi</a>
-        <a class="chip" href="https://github.com/Luna-devv/discord-oauth-privacy-rewrites" target="_blank" rel="noreferrer">GitHub</a>
-      </footer>
     </main>
 
     <script type="module" src="popup.js"></script>

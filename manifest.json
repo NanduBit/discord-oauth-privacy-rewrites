@@ -4,7 +4,8 @@
   "version": "2.0.0",
   "description": "Remove privacy-invasive Discord OAuth scopes during authorization.",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "action": {
     "default_popup": "popup.html",
