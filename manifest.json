@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Discord OAuth Privacy Rewrites",
+  "version": "2.0.0",
+  "description": "Remove privacy-invasive Discord OAuth scopes during authorization.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icon32.png"
+    }
+  },
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://discord.com/*",
+    "https://*.discord.com/*"
+  ],
+  "icons": {
+    "32": "icon32.png"
+  }
+}

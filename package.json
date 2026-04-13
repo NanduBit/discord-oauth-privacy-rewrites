@@ -1,39 +1,11 @@
 {
   "name": "discord-oauth-scope-rewrites",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build  && vite build --config vite-background.config.ts",
-    "lint": "eslint . --ext ts,tsx",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "discord-api-types": "^0.37.92",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1"
-  },
-  "devDependencies": {
-    "@types/chrome": "^0.0.268",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.16.0",
-    "@typescript-eslint/parser": "^7.16.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
-    "clsx": "^2.1.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-path-alias": "^2.1.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-unused-imports": "^4.0.0",
-    "postcss": "^8.4.39",
-    "tailwind-merge": "^2.4.0",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "check": "node --check background.js && node --check popup.js && node --check lib/rewrite-url.js && node --check lib/scopes.js && node --check lib/storage.js",
+    "build": "echo 'No build step required. Load this folder as an unpacked extension.'",
+    "dev": "echo 'No dev server. Use chrome://extensions and Load unpacked.'"
   }
 }

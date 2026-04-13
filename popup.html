@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord OAuth Privacy Rewrites</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Discord OAuth Privacy Rewrites</h1>
+        <p>Manage which OAuth scopes should be automatically removed.</p>
+      </header>
+
+      <section id="error-banner" class="error hidden"></section>
+
+      <section>
+        <div id="scopes" class="scope-grid"></div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <span class="icon ban" title="Disabling this may break apps">No</span>
+            <span>Might break commonly used apps</span>
+          </div>
+          <div class="legend-item">
+            <span class="icon warn" title="You should disable this for privacy">!</span>
+            <span>You should really disable this for the sake of your privacy</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="pause-section">
+        <button id="pause-button" type="button"></button>
+        <p id="pause-status" class="pause-status"></p>
+      </section>
+
+      <footer class="footer">
+        <a class="chip" href="https://discord.gg/yYd6YKHQZH" target="_blank" rel="noreferrer">Support</a>
+        <a class="chip" href="https://wamellow.com?utm_source=chrome-extension" target="_blank" rel="noreferrer">Wamellow</a>
+        <a class="chip" href="https://lunish.nl" target="_blank" rel="noreferrer">Portfolio</a>
+        <a class="chip" href="https://ko-fi.com/mwlica" target="_blank" rel="noreferrer">Ko-fi</a>
+        <a class="chip" href="https://github.com/Luna-devv/discord-oauth-privacy-rewrites" target="_blank" rel="noreferrer">GitHub</a>
+      </footer>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
